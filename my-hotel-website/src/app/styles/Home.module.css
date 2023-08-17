@@ -1,0 +1,50 @@
+/* styles/Home.module.css */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main {
+    width: 100%;
+  }
+  
+  .heroContainer {
+    position: relative;
+  }
+  
+  .heroText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+  
+    opacity: 0; 
+    animation: slideInFromTop 1s ease-out 0.5s forwards; 
+  }
+  
+  .heroTitle {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .heroDescription {
+    font-size: 1.5rem;
+  }
+  
+  /* Animation keyframes */
+  @keyframes slideInFromTop {
+    from {
+      transform: translate(-50%, -70%); /* Move the text up */
+      opacity: 0;
+    }
+    to {
+      transform: translate(-50%, -50%); /* Restore original position */
+      opacity: 1;
+    }
+  }
+  
